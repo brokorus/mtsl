@@ -1,0 +1,35 @@
+This script takes three har files for comparison.
+
+These 3 har files are used to generate an api call library for any site 
+converted directly to python. The goal is to automate Stupid things and stop
+people from making software arbritrarily difficult to automate.
+An optional 4th har file can be used to demonstrate environment variants.
+
+Key goals for library
+
+Identify login credentials and parameterize all calls with a single variable
+for the credentials used, then cookies generated/used.
+
+This is done by comparing two har files doing the exact same thing with the
+exact same variables
+
+Har file 1.
+	Use command+option+i in chrome to record your network traffic.
+  Go through what you want to do on that site.
+	After you are done, go to your chrome dev console. Hit the red dot to stop recording
+	Then right click and save all as har with content. Name it (har1)
+	Make sure to log out before beginning again
+
+Har file 2.
+	Do the exact same thing as above
+
+Har file 3.
+	Do the same workflow as above, but select different options on the pieces you
+	want to parameterize
+
+option Har file 4 or more
+	Do the same workflow as above, but input the different settings for the a different layer of variablization
+
+Once at least 3 har files are given. The program will begin comparisons of 
+bit of them to find where variablization is possible and where/what cookies are
+distributed. 
